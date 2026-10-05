@@ -5,52 +5,51 @@ python-MySQL connectivity program performing CRUD operations
 ### VIT Hostel Premier League — Technical Department Recruitment
 
 A Python–MySQL database management project developed as part of the **Database Management Team recruitment for VIT's Hostel Premier League (HPL) Technical Department**.
+
 This project demonstrates the integration of a Python application with a MySQL relational database to perform fundamental **CRUD (Create, Read, Update, Delete)** operations.
+
+---
 
 ## 📌 Project Overview
 
 The objective of this project is to demonstrate practical understanding of:
+
 - Python–MySQL connectivity
 - Relational database management
 - SQL queries
 - CRUD operations
 - Database-driven Python applications
 - Basic data management and manipulation
+
 The application provides a simple command-line interface through which student/player records can be created, viewed, updated, and deleted.
 
-⚙️ Technologies Used
+---
 
-Technology
+## ⚙️ Technologies Used
 
-Purpose
+| Technology | Purpose |
+|---|---|
+| **Python 3** | Application development |
+| **MySQL 8.4 LTS** | Relational database |
+| **MySQL Workbench** | Database management and SQL execution |
+| **MySQL Connector/Python** | Python–MySQL connectivity |
+| **Git & GitHub** | Version control and project hosting |
 
-Python 3
-
-Application development
-
-MySQL 8.4 LTS
-
-Relational database
-
-MySQL Workbench
-
-Database management and SQL execution
-
-MySQL Connector/Python
-
-Python–MySQL connectivity
-
-Git & GitHub
-
-Version control and project hosting
+---
 
 ## 🗄️ Database Structure
 
 The project uses a database named:
-'school'
+
+```text
+school
+```
 
 with a table named:
-'student'
+
+```text
+student
+```
 
 ### Student Table
 
@@ -62,18 +61,77 @@ with a table named:
 
 The `roll_no` field is used as the **Primary Key**.
 
+---
 
 ## 🔄 CRUD Operations
 
 The application implements all four fundamental database operations.
 
+### 1. Create
+
+Adds a new record to the database using the SQL `INSERT` statement.
+
+```sql
+INSERT INTO student VALUES (...);
+```
+
+### 2. Read
+
+Retrieves and displays existing records using the SQL `SELECT` statement.
+
+```sql
+SELECT * FROM student;
+```
+
+### 3. Update
+
+Modifies an existing record using the SQL `UPDATE` statement.
+
+```sql
+UPDATE student SET marks = ... WHERE roll_no = ...;
+```
+
+### 4. Delete
+
+Removes a record using the SQL `DELETE` statement.
+
+```sql
+DELETE FROM student WHERE roll_no = ...;
+```
+
+---
 
 ## 🔌 Python–MySQL Connectivity
 
 The application uses `mysql-connector-python` to establish communication between Python and MySQL.
-A MySQL cursor is then used to execute SQL queries
-Changes made through 'INSERT' , `UPDATE` , and `DELETE` operations are committed using: con.commit()
 
+Example:
+
+```python
+import mysql.connector
+
+con = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="YOUR_MYSQL_PASSWORD",
+    database="school"
+)
+```
+
+A MySQL cursor is then used to execute SQL queries:
+
+```python
+cur = con.cursor()
+cur.execute(query, data)
+```
+
+Changes made through `INSERT`, `UPDATE`, and `DELETE` operations are committed using:
+
+```python
+con.commit()
+```
+
+---
 
 ## 📁 Project Structure
 
@@ -105,6 +163,12 @@ Provides documentation, setup instructions, and an overview of the project.
 
 Install Python 3 from the official Python website.
 
+Verify the installation:
+
+```bash
+python --version
+```
+
 ### 2. Install MySQL
 
 Install **MySQL Community Server 8.4 LTS** and MySQL Workbench.
@@ -113,7 +177,21 @@ Make sure the MySQL Server is running before executing the Python program.
 
 ### 3. Install MySQL Connector/Python
 
+Run:
+
+```bash
+pip install mysql-connector-python
+```
+
 ### 4. Create the Database
+
+Open MySQL Workbench and execute the contents of:
+
+```text
+database.sql
+```
+
+This creates the required database and table.
 
 ### 5. Configure the Python Program
 
