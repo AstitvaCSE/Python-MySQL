@@ -18,14 +18,31 @@ The objective of this project is to demonstrate practical understanding of:
 - Basic data management and manipulation
 The application provides a simple command-line interface through which student/player records can be created, viewed, updated, and deleted.
 
-## ⚙️ Technologies Used
+⚙️ Technologies Used
 
-| **Python 3** | Application development |
-| **MySQL 8.4 LTS** | Relational database |
-| **MySQL Workbench** | Database management and SQL execution |
-| **MySQL Connector/Python** | Python–MySQL connectivity |
-| **Git & GitHub** | Version control and project hosting |
+Technology
 
+Purpose
+
+Python 3
+
+Application development
+
+MySQL 8.4 LTS
+
+Relational database
+
+MySQL Workbench
+
+Database management and SQL execution
+
+MySQL Connector/Python
+
+Python–MySQL connectivity
+
+Git & GitHub
+
+Version control and project hosting
 
 ## 🗄️ Database Structure
 
