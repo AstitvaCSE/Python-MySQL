@@ -105,19 +105,6 @@ DELETE FROM student WHERE roll_no = ...;
 
 The application uses `mysql-connector-python` to establish communication between Python and MySQL.
 
-Example:
-
-```python
-import mysql.connector
-
-con = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="YOUR_MYSQL_PASSWORD",
-    database="school"
-)
-```
-
 A MySQL cursor is then used to execute SQL queries:
 
 ```python
